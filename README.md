@@ -1,61 +1,77 @@
-# Emmanuel Adeshina
+Security-focused engineer building lightweight security tooling for web exposure analysis, infrastructure misconfiguration detection, and operational security visibility.
 
-Engineering scalable systems, resilient infrastructure, and security-conscious software.
-
----
-
-## Overview
-
-Cybersecurity student with a strong focus on software engineering, cloud infrastructure, and modern system architecture.
-
-Passionate about building reliable digital systems that combine scalability, performance, and security.
+I design systems that turn publicly observable infrastructure signals into structured security findings.
 
 ---
 
-## Focus Areas
+## Current Focus
 
-- Software Engineering
-- Cloud Infrastructure
-- Backend Engineering
-- System Architecture
-- Security-Oriented Development
-- Automation & Reliability
+Building small, focused tools that analyze how real-world web systems expose themselves at the HTTP and infrastructure layer.
 
----
+Primary project:
 
-## Current Direction
+- headershield → CLI-based web security posture analyzer
 
-Building modern software systems designed for reliability, scalability, and operational resilience.
+Supporting work:
 
-Focused on long-term growth in cloud security, infrastructure engineering, and distributed systems.
+- security lab reports → structured breakdown of real-world breach patterns and misconfigurations
+- web reconnaissance utilities → lightweight scripts for infrastructure visibility and signal extraction
 
 ---
 
-## Tech Stack
+## What I Work On
 
-### Languages
-- Python
-- JavaScript
-- SQL
-- Bash
-
-### Tools & Technologies
-- Linux
-- Git & GitHub
-- Docker
-- PostgreSQL
-- REST APIs
-- VS Code
+- Web security posture analysis (HTTP + browser-facing risks)
+- Infrastructure misconfiguration detection (public surface only)
+- Security signal extraction from real systems
+- Backend tooling for security analysis workflows
 
 ---
 
-## Philosophy
+## Featured Project
 
-> Great systems are not only built to work.
-> They are built to endure.
+### headershield
+Lightweight CLI tool for analyzing HTTP security posture across public endpoints.
+
+It performs structured analysis of security-relevant HTTP headers and generates reproducible audit-style reports.
+
+Core capabilities:
+
+- Detects missing or misconfigured security headers (CSP, HSTS, X-Frame-Options, etc.)
+- Translates raw header state into structured risk findings
+- Generates consistent, audit-style security reports for external systems
+- Supports batch scanning for comparative analysis
+
+Output is designed to be:
+- reproducible
+- engineer-readable
+- suitable for security review workflows
+
+Repository: [link]
+
+---
+
+## Design Philosophy
+
+Security tools should not be complex to use — they should be precise in what they reveal.
+
+I focus on:
+- small tools with high signal value
+- deterministic outputs (no ambiguity in findings)
+- reproducible security observations
+- systems that scale from single scan → comparative analysis
+
+---
+
+## Engineering Direction
+
+Building toward systems that can:
+- analyze real-world exposure surfaces at scale
+- produce structured security intelligence from public endpoints
+- support lightweight external security assessments
 
 ---
 
 ## Contact
 
-- emmanuel.adeshina@proton.me
+emmanuel.adeshina@proton.me
