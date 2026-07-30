@@ -1,10 +1,14 @@
 # Adeshina Emmanuel Abiodun
 
-**Backend, Platform & Security Engineer — Nigeria**
+Backend, Platform & Security Engineer — Nigeria
 
 [GitHub](https://github.com/emmanueladesina) · [Hashnode](https://hashnode.com/@emmanueladeshina01) · [Email](mailto:E.adeshina@proton.me)
 
+---
+
 I build backend and platform systems on the assumption that something will eventually fail — a node, a network partition, a dependency, an operator with too much access. My work is in distributed systems, event-driven architecture, and infrastructure security: the layer beneath the application that decides whether a failure is contained or catastrophic. I founded **RELIASTRA**, a financial liability intelligence platform built around immutable audit chains and Kubernetes-native infrastructure, and I'm building **CHIMERA**, an operating system for coordinating autonomous AI agents. Most of the work happens before a feature ships — modeling failure paths, defining service boundaries, and deciding what the system does when something goes wrong.
+
+---
 
 ## Engineering Philosophy
 
@@ -17,10 +21,12 @@ A few things follow from that:
 - Infrastructure policy — rate limits, isolation boundaries, access control — is derived from modeled attack paths, not applied as a checklist afterward.
 - A system that can't be observed can't be trusted. Visibility into failure states is part of the design, not tooling added once something breaks.
 
-## What I'm Building
-
 > [!NOTE]
 > Everything under **What I'm Building** below is production infrastructure that shipped — not a demo, a tutorial project, or a wrapper around someone else's API.
+
+---
+
+## What I'm Building
 
 ### RELIASTRA — Financial Liability Intelligence Platform
 
@@ -39,23 +45,22 @@ RELIASTRA is a production-grade platform for financial liability intelligence, a
 
 <details>
 <summary>High-level request & event flow</summary>
-<br>
 
 ```mermaid
 flowchart LR
-    Client -->|HTTPS| Kong["Kong API Gateway"]
-    Kong --> SvcA["Liability Service"]
-    Kong --> SvcB["Audit Service"]
-    Kong --> SvcC["Risk Engine"]
-    SvcA --> Kafka[("Kafka Event Bus")]
+    Client -->|HTTPS| Kong[Kong API Gateway]
+    Kong --> SvcA[Liability Service]
+    Kong --> SvcB[Audit Service]
+    Kong --> SvcC[Risk Engine]
+    SvcA --> Kafka[(Kafka Event Bus)]
     SvcB --> Kafka
     SvcC --> Kafka
-    Kafka --> Chain["Immutable Audit Chain"]
-    SvcA --> PG[("PostgreSQL")]
-    SvcA --> Redis[("Redis / Bloom Filters")]
+    Kafka --> Chain[Immutable Audit Chain]
+    SvcA --> PG[(PostgreSQL)]
+    SvcA --> Redis[(Redis / Bloom Filters)]
     Chain --> PG
 
-    subgraph Cluster["Kubernetes Cluster"]
+    subgraph Cluster[Kubernetes Cluster]
         Kong
         SvcA
         SvcB
@@ -66,6 +71,8 @@ flowchart LR
 </details>
 
 **Stack:** Go · Python · Kubernetes · Docker · PostgreSQL · Kafka · Redis · Kong Gateway · Terraform · AWS
+
+---
 
 ### CHIMERA — Intelligence Operating System
 
@@ -85,22 +92,23 @@ CHIMERA is a platform for coordinating autonomous AI agents — memory, planning
 
 <details>
 <summary>Conceptual layer model</summary>
-<br>
 
 ```mermaid
 flowchart TB
-    Agents["Autonomous Agents"] --> Orchestration["Orchestration #38; Planning Layer"]
-    Orchestration --> Memory["Memory Layer"]
-    Orchestration --> Reasoning["Reasoning Layer"]
-    Orchestration --> Execution["Execution #38; Tooling Layer"]
-    Memory --> Infra["Platform Infrastructure"]
+    Agents[Autonomous Agents] --> Orchestration[Orchestration & Planning Layer]
+    Orchestration --> Memory[Memory Layer]
+    Orchestration --> Reasoning[Reasoning Layer]
+    Orchestration --> Execution[Execution & Tooling Layer]
+    Memory --> Infra[Platform Infrastructure]
     Reasoning --> Infra
     Execution --> Infra
-    Infra --> Automation["Enterprise Automation"]
-    Infra --> SecIntel["Cybersecurity Intelligence"]
+    Infra --> Automation[Enterprise Automation]
+    Infra --> SecIntel[Cybersecurity Intelligence]
 ```
 
 </details>
+
+---
 
 ## Areas of Interest
 
@@ -111,11 +119,15 @@ flowchart TB
 - **Production Reliability** — designing for degraded operation instead of designing for the happy path.
 - **Backend Architecture** — service boundaries and data ownership as architectural decisions, not implementation detail.
 
+---
+
 ## Technical Research
 
 Technical writing at [hashnode.com/@emmanueladeshina01](https://hashnode.com/@emmanueladeshina01), covering AWS IAM, cloud security, distributed systems, production engineering, and backend architecture.
 
 One piece models AWS IAM as a graph of relationships rather than a flat permission list — treating it as an attack-path analysis problem instead of purely an authentication concern.
+
+---
 
 ## Selected Engineering Principles
 
@@ -126,50 +138,53 @@ One piece models AWS IAM as a graph of relationships rather than a flat permissi
 - **Deterministic deployments.** A deployment behaves the same way in staging as it does in production, every time.
 - **Operational simplicity.** Complexity is justified by the failure modes it prevents, not by the problem it makes easier to describe.
 
+---
+
 ## Technologies
 
 **Languages**
-
-![Go](https://img.shields.io/badge/Go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Go](https://img.shields.io/badge/Go-1a1a1a?style=flat-square&logo=go&logoColor=white)
+![Python](https://img.shields.io/badge/Python-1a1a1a?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-1a1a1a?style=flat-square&logo=postgresql&logoColor=white)
 
 **Frameworks**
-
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-%23000000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-1a1a1a?style=flat-square&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-1a1a1a?style=flat-square&logo=flask&logoColor=white)
+![Django](https://img.shields.io/badge/Django-1a1a1a?style=flat-square&logo=django&logoColor=white)
 
 **Data & Messaging**
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1a1a1a?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-1a1a1a?style=flat-square&logo=redis&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-1a1a1a?style=flat-square&logo=apachekafka&logoColor=white)
 
 **Infrastructure & Orchestration**
-
-![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-1a1a1a?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-1a1a1a?style=flat-square&logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-1a1a1a?style=flat-square&logo=terraform&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-1a1a1a?style=flat-square&logo=amazonaws&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-1a1a1a?style=flat-square&logo=linux&logoColor=white)
+![NGINX](https://img.shields.io/badge/NGINX-1a1a1a?style=flat-square&logo=nginx&logoColor=white)
 
 **Gateway**
-
-![Kong](https://img.shields.io/badge/Kong-002B49?style=for-the-badge&logo=kong&logoColor=white)
+![Kong](https://img.shields.io/badge/Kong-1a1a1a?style=flat-square&logo=kong&logoColor=white)
 
 **Automation**
-
-![Terraform](https://img.shields.io/badge/Terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-1a1a1a?style=flat-square&logo=githubactions&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-1a1a1a?style=flat-square)
 
 **Security**
+![AWS IAM](https://img.shields.io/badge/AWS_IAM-1a1a1a?style=flat-square&logo=amazonaws&logoColor=white)
+![SSH](https://img.shields.io/badge/SSH_Hardening-1a1a1a?style=flat-square&logo=openssh&logoColor=white)
 
-![AWS IAM](https://img.shields.io/badge/AWS%20IAM-DD344C?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![Attack-Path Modeling](https://img.shields.io/badge/Attack--Path%20Modeling-1A1A1A?style=for-the-badge)
-![Zero Trust](https://img.shields.io/badge/Zero%20Trust-1A1A1A?style=for-the-badge)
+---
 
 ## Current Focus
 
 - Extending CHIMERA's orchestration layer to support persistent multi-agent memory and planning
 - Hardening RELIASTRA's audit-chain and disaster-recovery paths for production scale
 - Continuing the AWS IAM attack-path graph research
+
+---
 
 ## Contact
 
