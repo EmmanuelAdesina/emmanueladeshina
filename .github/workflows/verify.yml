@@ -1,0 +1,71 @@
+name: Portfolio Verification & Mathematical Models CI
+
+on:
+  push:
+    branches: [main, "arena/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify-models-and-assets:
+    name: Verify Mathematical Models, SVGs & Links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run AWS IAM & Telemetry Mathematical Model Unit Tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Execute Reproducible Mathematical Demonstration
+        run: python3 -m models.demo
+
+      - name: Validate SVG Assets & Local Markdown Links
+        run: |
+          python3 - <<'PY'
+          import os, re, sys
+          import xml.etree.ElementTree as ET
+
+          for svg in ["assets/header-banner.svg", "assets/reliastra-architecture.svg", "assets/iam-evaluation-mathematics.svg"]:
+              if not os.path.exists(svg):
+                  sys.exit(f"Missing SVG asset: {svg}")
+              ET.parse(svg)
+              print(f"SVG valid: {svg}")
+
+          with open("README.md", encoding="utf-8") as f:
+              md = re.sub(r"`[^`]+`", "", f.read())
+
+          for match in re.finditer(r'(?:\]\(|src=")([^"#\)]+)', md):
+              target = match.group(1).strip()
+              if target.startswith(("http://", "https://", "mailto:")):
+                  continue
+              clean = target.lstrip("./")
+              if not os.path.exists(clean):
+                  sys.exit(f"Broken relative link in README.md: {target}")
+              print(f"Relative path verified: {target}")
+          PY
+
+  verify-go-remediation:
+    name: Verify Go Cloud Identity Graph Implementation
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: remediation/cloud-identity-security-engineering
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - name: Check internal/graph LOC cap (<= 300 lines)
+        run: |
+          loc=$(wc -l < internal/graph/identity_graph.go)
+          echo "internal/graph LOC: $loc"
+          test "$loc" -le 300
+      - name: Build and test Go packages
+        run: |
+          go build ./...
+          go test -race -v ./...

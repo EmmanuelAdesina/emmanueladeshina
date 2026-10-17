@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%" role="img" aria-labelledby="bannerTitle bannerDesc">
+  <title id="bannerTitle">Adeshina Emmanuel Abiodun — Systems Security Engineer</title>
+  <desc id="bannerDesc">Systems Security Engineer specializing in cloud identity and authorization semantics, secure platform architecture, AI infrastructure boundaries, and mathematical verification of distributed systems.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="55%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1324"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1E293B" stroke-width="0.7" stroke-opacity="0.55"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="340" rx="10" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="1200" height="340" rx="10" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1200" height="4" rx="2" fill="url(#accentLine)"/>
+
+  <!-- Left Column: Identity & Positioning -->
+  <g transform="translate(44, 46)">
+    <rect x="0" y="0" width="510" height="24" rx="4" fill="#0F1D32" stroke="#1E3A5F" stroke-width="1"/>
+    <circle cx="13" cy="12" r="3.5" fill="#38BDF8"/>
+    <text x="25" y="16" fill="#7DD3FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="0.8">
+      SYSTEMS SECURITY · CLOUD IDENTITY · VERIFIABLE INFRASTRUCTURE
+    </text>
+
+    <text x="0" y="72" fill="#F8FAFC" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-0.6">
+      Adeshina Emmanuel Abiodun
+    </text>
+
+    <text x="0" y="106" fill="#CBD5E1" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18.5" font-weight="500">
+      Systems Security Engineer — Designing &amp; Operating Verifiable Secure Systems
+    </text>
+
+    <text x="0" y="142" fill="#94A3B8" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5">
+      Explicit trust boundaries, AWS IAM authorization semantics, SSRF-safe network probing,
+    </text>
+    <text x="0" y="162" fill="#94A3B8" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5">
+      cryptographic evidence pipelines (SHA-256 / Ed25519), and mathematical systems analysis.
+    </text>
+
+    <!-- Evidence Pills -->
+    <g transform="translate(0, 188)">
+      <rect x="0" y="0" width="232" height="28" rx="5" fill="#111C2D" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="18" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="600">
+        Founder &amp; Principal · RELIASTRA
+      </text>
+
+      <rect x="242" y="0" width="166" height="28" rx="5" fill="#111C2D" stroke="#334155" stroke-width="1"/>
+      <text x="254" y="18" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5">
+        Go · Python · FastAPI
+      </text>
+
+      <rect x="418" y="0" width="212" height="28" rx="5" fill="#111C2D" stroke="#334155" stroke-width="1"/>
+      <text x="430" y="18" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5">
+        AWS IAM · K8s · AI Sec
+      </text>
+    </g>
+
+    <!-- Bottom Coordinate Line -->
+    <text x="0" y="246" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5">
+      LOC: Nigeria · Open to EU &amp; Australia Relocation · CORPUS: reliastra.com/research · REPO: ReliaAstra/Reliastra
+    </text>
+  </g>
+
+  <!-- Vertical Divider -->
+  <line x1="708" y1="36" x2="708" y2="304" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Right Column: Mathematical & Architectural Specification Card -->
+  <g transform="translate(732, 34)">
+    <rect x="0" y="0" width="432" height="272" rx="8" fill="#0B111E" stroke="#1E293B" stroke-width="1.2"/>
+
+    <text x="18" y="26" fill="#7DD3FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="0.6">
+      § FORMAL INVARIANTS IN PRODUCTION &amp; RESEARCH
+    </text>
+    <line x1="18" y1="36" x2="414" y2="36" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Invariant 1 -->
+    <text x="18" y="58" fill="#E2E8F0" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">
+      1. Single-Account Authorization Algebra (7 Classes)
+    </text>
+    <text x="18" y="77" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">
+      Eval(q) = ¬D(q) ∧ C_org(q) ∧ [(G_R(q) ∧ φ(π)) ∨ (G_I(q) ∧ C_p(q))]
+    </text>
+    <text x="18" y="93" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">
+      φ(RoleARN) = false (capped)  |  φ(AssumedRoleSessionARN) = true
+    </text>
+
+    <line x1="18" y1="106" x2="414" y2="106" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Invariant 2 -->
+    <text x="18" y="126" fill="#E2E8F0" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">
+      2. Executable Reachability on Trust Graph G = (V, E)
+    </text>
+    <text x="18" y="145" fill="#A5B4FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">
+      ExecPath(v_0 →* v_k) ⟺ ∀e_i ∈ p, Eval(e_i, P_i) = ALLOW
+    </text>
+    <text x="18" y="161" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">
+      Distinguishes structural graph paths from ceiling-surviving paths
+    </text>
+
+    <line x1="18" y1="174" x2="414" y2="174" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Invariant 3 -->
+    <text x="18" y="194" fill="#E2E8F0" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600">
+      3. Bucketed Telemetry Bound &amp; Evidence Integrity
+    </text>
+    <text x="18" y="213" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">
+      Δ_naive(B) = min(Δ, B)  |  Δ_med = median(t_{i+1} − t_i)
+    </text>
+    <text x="18" y="231" fill="#FBBF24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5">
+      σ = Ed25519_Sign_sk(SHA256(canonical_payload)) · /v1/verify
+    </text>
+
+    <rect x="18" y="242" width="396" height="20" rx="3" fill="#0F172A"/>
+    <text x="26" y="256" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">
+      VERIFIED SUITE: python3 -m unittest discover -s tests -v (28/28 OK)
+    </text>
+  </g>
+</svg>
