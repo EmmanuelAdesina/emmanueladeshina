@@ -1,0 +1,25 @@
+name: Go CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+      - name: Verify graph package LOC cap (<= 300 lines)
+        run: |
+          loc=$(wc -l < internal/graph/identity_graph.go)
+          echo "internal/graph LOC: $loc"
+          test "$loc" -le 300
+      - name: Build CLI binaries
+        run: go build ./...
+      - name: Run unit tests with race detector
+        run: go test -race -v ./...
