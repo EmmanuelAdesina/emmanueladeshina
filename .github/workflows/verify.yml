@@ -13,6 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Reject GitHub-unsupported README math macros
+        run: |
+          if grep -Fq '\operatorname' README.md; then
+            printf '%s\n' 'README.md contains unsupported \operatorname; use \mathrm instead.' >&2
+            exit 1
+          fi
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
